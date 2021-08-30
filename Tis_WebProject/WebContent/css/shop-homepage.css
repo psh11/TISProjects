@@ -1,0 +1,61 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template/shop-homepage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.serv_list{
+    padding-top:20px;
+    padding-bottom:70px;
+}
+
+.serv_list .container{
+    max-width: 1100px;
+    margin:auto;
+}
+
+.serv_list .container .item_list{
+    display: flex;
+    flex-wrap : wrap; 
+    justify-content: space-between;
+}
+
+.serv_list .container .item_list .card{
+    border: 1px solid #eee; 
+    border-radius: 5px; 
+    height: 350px;
+    width: 250px;
+    /*padding: 2px;
+    margin-bottom: 5px;*/
+}
+
+.serv_list .container .item_list .card img{
+    height: 200px;
+    width: 250px
+} 
+
+.serv_list .container .item_list .card .text p{
+    font-size: 14px;
+    opacity: .8;
+}
+
+.serv_list .container .item_list .card .text button{
+    background: black;
+    color:white;
+    border:2px solid white; 
+    border-radius:5px; 
+    padding:5px 10px;
+    font-size:10px;
+    transition: .5s ease; 
+    align : right;
+}
+
+.serv_list .container .item_list .card .text button:hover{
+    transition: .5s ease;
+    border:2px solid black;
+    background: transparent;
+    color:black;
+}

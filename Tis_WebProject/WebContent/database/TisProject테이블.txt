@@ -1,0 +1,159 @@
+drop table tis_member;
+
+create table tis_member (
+id varchar2(15) primary key,
+password varchar2(20) not null,
+name varchar2(10) not null,
+email varchar2(20) not null,
+phone varchar2(15) not null,
+gender varchar2(10) not null,
+address varchar2(100) not null,
+regdate date not null
+);
+
+drop sequence member_seq;
+
+create sequence member_seq;
+
+insert into tis_member values('tis', '1234', '길동', 'tis@naver.com', '01012345678', 'man','서울',sysdate);
+insert into tis_member values('kkk', '1234', '이름', 'tis@naver.com', '01012345678', 'man','서울',sysdate);
+insert into tis_member values('admin', '1234', '관리자', 'tis@naver.com', '01012345688', 'man','서울',sysdate);
+
+drop table tis_webproduct;
+
+create table tis_webproduct (
+ product_id number(4) primary key,
+ product_code number(3) not null,
+ product_name varchar2(500) not null,
+ product_price number default 0,
+ product_content varchar2(1024) not null,
+ product_img1 varchar2(500) not null,
+ product_img2 varchar2(100),
+ product_img3 varchar2(100)
+ );
+
+drop sequence webwebproduct_seq;
+
+create sequence webwebproduct_seq
+INCREMENT BY 1
+START WITH 1
+NOMINVALUE
+MAXVALUE 9999
+NOCYCLE
+NOCACHE;
+
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'에치아 삭스 슬립온 4cm', 25900, '짱짱한 스판소재로 발목에 착 감기는 편안함과 백라인의 레터링 포인트가 매력적인 삭스 슬립온', 'T1.jpg', 'T1_1.jpg', 'T1_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'카벤스 삭스 키높이 스니커즈 6cm', 22900, '깔끔한 쉐입에 레터링 디테일이 포인트! 편안한 스판삭스에 키높이까지 더했어요', 'T2.jpg', 'T2_1.jpg', 'T2_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'비에츠 삭스 하이탑 스니커즈 2cm', 23900, '캐주얼하고 데일리한 디자인으로 다양한룩에 활용도높게 신어질 삭스 스니커즈', 'T3.jpg', 'T3_1.jpg', 'T3_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'레키엘 삭스 스니커즈 2cm', 23900, '스판소재로 편안한 착화부터 유연한 텐션감까지 있어 착화내내 발의 부담을 덜어준답니다.', 'T4.jpg', 'T4_1.jpg', 'T4_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'말랑 가죽 키높이 로퍼 3cm', 49900, '신어주기만해도 멋스러운 천연소가죽 키높이 로퍼', 'F2.jpg', 'F2_1.jpg', 'F2_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'헬리나 미들힐 펌프스 5cm', 39900, '기본,그 이상의 슈즈', 'F3.jpg', 'F3_1.jpg', 'F3_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'코티스 플랫슈즈 1cm', 25900, '데일리한 디자인과 멋스러운 11가지 컬러!고객후기가 인정한 그 슈즈', 'F4.jpg', 'F4_1.jpg', 'F4_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'라프엘 키높이 로퍼 4cm', 29900, '베이직하면서도 멋스러운 포인트로 어떤룩에나 매치하기 쉬운 로퍼', 'F5.jpg', 'F5_1.jpg', 'F5_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'니테브 니트 하이힐 7cm', 29900, '니트 소재로 부드럽고 유연한 착화감을 느끼실 수 있으며, 깔끔한 디자인의 니테브 니트 하이힐', 'H4.jpg', 'H4_1.jpg', 'H4_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'다엘브 미들힐 펌프스 5cm', 27900, '골드 포인트 디테일이 데일리룩에 신어만 주어도 포인트가 되어주는 미들힐', 'H5.jpg', 'H5_1.jpg', 'H5_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'팬시 스틸레토 하이힐 9cm', 43900, '트렌디함과 여성스러운 매력을 겸비한매력적인 라인감의 스틸레토힐 만나보세요', 'H6.jpg', 'H6_1.jpg', 'H6_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'뒷태여신 삭스 앵클부츠 5cm', 39900, '미끄러움 걱정없는 논슬립 바닥창을 사용해 안정감있는 착화감을 선사해준답니다', 'B2.jpg', 'B2_1.jpg', 'B2_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'스타일링 워커 5cm', 55900, '러블리 메이드 워커', 'B3.jpg', 'B3_1.jpg', 'B3_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'토피엔 통굽 스니커즈 4cm', 25900, '유연한 텐션감으로 발의 편안함은 물론 깔끔한 디자인의 데일리 스니커즈', 'S5.jpg', 'S5_1.jpg', 'S5_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'웬스 키높이 스니커즈 5cm', 39900, '2cm의 속굽으로 자연스러운 키높이 효과와 실버, 골드 글리터 포인트가 매력적인 스니커즈', 'S6.jpg', 'S6_1.jpg', 'S6_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'로인츠 키높이 삭스 스니커즈 8cm', 35900, '너무~편하고이쁜, 키높이 8cm 후기증명 러블리슈즈 베스트1위 스니커즈', 'S7.jpg', 'S7_1.jpg', 'S7_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'이너프 어글리 스니커즈 5cm', 25900, '한결 스타일리쉬한 매력을 더해주는 아이템으로 자꾸만 손이 가는 아이템이랍니다', 'S8.jpg', 'S8_1.jpg', 'S8_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'좋아요 삭스 키높이 스니커즈 3cm', 39900, '발에 착 감기는 스판 소재로 제작되어 가볍고 편안한 발걸음을 선사해 줄 거에요', 'S9.jpg', 'S9_1.jpg', 'S9_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'로레프 삭스 스니커즈 2cm', 21900, '2.5cm의 굽높이로 부담없이 신기 좋은 스판소재의 편안한 스니커즈', 'S10.jpg', 'S10_1.jpg', 'S10_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'도피엔 삭스 스니커즈 2cm', 19900, '캐주얼한 디자인으로 어디에나 매치하기 좋은 가벼운 삭스 스니커즈', 'T5.jpg', 'T5_1.jpg', 'T5_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'티레츠 삭스 스니커즈 4cm', 35900, '스판 소재로 손쉽게 착화가 가능하며쿠션패드로 편안한 착화감을 주는 스니커즈', 'T6.jpg', 'T6_1.jpg', 'T6_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'이지엘 삭스 스니커즈 4cm', 66900, '가벼운 소재감으로쭈-욱 신어주기 좋으며 스판기 있는 소재로 제작되어 편안해요', 'T7.jpg', 'T7_1.jpg', 'T7_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'치에트 삭스 슬립온 4cm', 32900, '4.5cm의 굽높이로 키높이 효과는 물론 캐주얼하게 즐겨신기 좋은 삭스 슬립온', 'T8.jpg', 'T8_1.jpg', 'T8_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'보나코 삭스 스니커즈 4cm', 21900, '발에 착-감기는 신축성 좋은 스판 삭스 스니커즈 도톰하고 푹신한 분리깔창으로 편안함을 느껴보세요', 'T9.jpg', 'T9_1.jpg', 'T9_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 1,'페로크 아쿠아 삭스 슬립온 3cm', 19900, '가볍고 편안한 삭스 슬립온 통기성은 물론 배수성 또한 좋은 아쿠아 삭스슈즈', 'T10.jpg', 'T10_1.jpg', 'T10_2.jpg');
+
+insert into tis_webproduct values(webproduct_seq.nextval, 2,'헬리나 미들힐 펌프스 5cm', 39900, '기본,그 이상의 슈즈', 'H1.jpg', 'H1_1.jpg', 'H1_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 2,'느낌 미들힐 펌프스 5cm', 39900, '기본핏에 툭 신어주어도 한결 무드를 입혀줄 느낌있는 미들힐이랍니다', 'H2.jpg', 'H2_1.jpg', 'H2_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 2,'델린즈 미들힐 펌프스 6cm', 32900, '발등 위의 프릴 디테일로 러블리한 무드가 가득 느껴지는 미들힐이에요', 'H3.jpg', 'H3_1.jpg', 'H3_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 2,'니테브 니트 하이힐 7cm', 29900, '니트 소재로 부드럽고 유연한 착화감을 느끼실 수 있으며, 깔끔한 디자인의 니테브 니트 하이힐', 'H4.jpg', 'H4_1.jpg', 'H4_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 2,'다엘브 미들힐 펌프스 5cm', 27900, '골드 포인트 디테일이 데일리룩에 신어만 주어도 포인트가 되어주는 미들힐', 'H5.jpg', 'H5_1.jpg', 'H5_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 2,'팬시 스틸레토 하이힐 9cm', 43900, '트렌디함과 여성스러운 매력을 겸비한매력적인 라인감의 스틸레토힐 만나보세요', 'H6.jpg', 'H6_1.jpg', 'H6_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 2,'마엘르 스틸레토 하이힐 9cm', 34900, '얄쌍하게 빠진 앞코 세입은 시크하면서도 단정한 느낌으로 라인을 살려주는 하이힐', 'H7.jpg', 'H7_1.jpg', 'H7_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 2,'어필 스틸레토 하이힐 9cm', 28900, '신는순간 매력지수+10 잘빠진 라인감의 스틸레토 하이힐 소개해요-', 'H8.jpg', 'H8_1.jpg', 'H8_2.jpg');
+
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'베이직한 키높이 스니커즈 5cm', 29900, '언제 어디서든 신기좋은 만능템!기본핏에 키높이 효과를 더했어요:D', 'S1.jpg', 'S1_1.jpg', 'S1_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'네드 가죽 스니커즈 2cm', 39900, '이 퀄리티에 이가격이라니!?소가죽 베이직 스니커즈', 'S2.jpg', 'S2_1.gif', 'S2_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'구름 어글리 스니커즈 5cm', 29900, '러블리한 라인과 5cm의 네츄럴한 어글리 스니커즈', 'S3.jpg', 'S3_1.jpg', 'S3_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'핏보장 키높이 스니커즈 8cm', 43900, '운동화에 이 다리라인 말이돼!? 숨은 속굽이 더해진 8cm 굽으로 라인어필 돼', 'S4.jpg', 'S4_1.jpg', 'S4_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'토피엔 통굽 스니커즈 4cm', 25900, '유연한 텐션감으로 발의 편안함은 물론 깔끔한 디자인의 데일리 스니커즈', 'S5.jpg', 'S5_1.jpg', 'S5_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'웬스 키높이 스니커즈 5cm', 39900, '2cm의 속굽으로 자연스러운 키높이 효과와 실버, 골드 글리터 포인트가 매력적인 스니커즈', 'S6.jpg', 'S6_1.jpg', 'S6_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'로인츠 키높이 삭스 스니커즈 8cm', 35900, '너무~편하고이쁜, 키높이 8cm 후기증명 러블리슈즈 베스트1위 스니커즈', 'S7.jpg', 'S7_1.jpg', 'S7_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'이너프 어글리 스니커즈 5cm', 25900, '한결 스타일리쉬한 매력을 더해주는 아이템으로 자꾸만 손이 가는 아이템이랍니다', 'S8.jpg', 'S8_1.jpg', 'S8_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'좋아요 삭스 키높이 스니커즈 3cm', 39900, '발에 착 감기는 스판 소재로 제작되어 가볍고 편안한 발걸음을 선사해 줄 거에요', 'S9.jpg', 'S9_1.jpg', 'S9_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'로레프 삭스 스니커즈 2cm', 21900, '2.5cm의 굽높이로 부담없이 신기 좋은 스판소재의 편안한 스니커즈', 'S10.jpg', 'S10_1.jpg', 'S10_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'발리아 스니커즈 6cm', 49900, '블링블링한 장식 디테일이 드레시하면서도유니크함에 데일리로 딱인 세련된 슈즈', 'S11.jpg', 'S11_1.jpg', 'S11_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'플라워 스니커즈 3cm', 29900, '말랑말랑~ 텐션감 좋은 바디로 편안한 착화감을 주어 신는순간 데일리슈즈', 'S12.jpg', 'S12_1.jpg', 'S12_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 3,'소프트톤 통굽 키높이 스니커즈 4cm', 32900, '국내생산 공정으로 남다른 퀄리티!! 데일리 슈즈로 딱 좋은 박스터 만나보세요-', 'S13.jpg', 'S13_1.jpg', 'S13_2.jpg');
+
+insert into tis_webproduct values(webproduct_seq.nextval, 4,'컬러퐁당 키높이 로퍼 2cm', 39900, '예쁨 끝판왕 컬러퐁당 빠르게 겟하세요', 'F1.jpg', 'F1_1.jpg', 'F1_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 4,'말랑 가죽 키높이 로퍼 3cm', 49900, '신어주기만해도 멋스러운 천연소가죽 키높이 로퍼', 'F2.jpg', 'F2_1.jpg', 'F2_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 4,'헬리나 미들힐 펌프스 5cm', 39900, '기본,그 이상의 슈즈', 'F3.jpg', 'F3_1.jpg', 'F3_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 4,'코티스 플랫슈즈 1cm', 25900, '데일리한 디자인과 멋스러운 11가지 컬러!고객후기가 인정한 그 슈즈', 'F4.jpg', 'F4_1.jpg', 'F4_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 4,'라프엘 키높이 로퍼 4cm', 29900, '베이직하면서도 멋스러운 포인트로 어떤룩에나 매치하기 쉬운 로퍼', 'F5.jpg', 'F5_1.jpg', 'F5_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 4,'루케트 가죽 키높이 로퍼 4cm', 32900, '바닥 전체 쿠션창으로 신자마자 느껴지는 차원이 다른 편안함의 키높이 로퍼', 'F6.jpg', 'F6_1.jpg', 'F6_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 4,'달달해 키높이 로퍼 4cm', 34900, '산뜻한 컬러감에 기분마저 좋아지는 달달해 키높이 로퍼 놓치지 마세요', 'F7.jpg', 'F7_1.jpg', 'F7_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 4,'여친룩 프릴 플랫슈즈 2cm', 34900, '몰드창으로 편안한 워킹감을 주며 프릴 디테일로 여성스러운 매력을 한스푼 더해줄거에요', 'F8.jpg', 'F8_1.jpg', 'F8_2.jpg');
+
+insert into tis_webproduct values(webproduct_seq.nextval, 5,'잇걸 삭스 앵클부츠 3cm', 34900, '러블리슈즈에서만 느껴보실 수 있는 착화감!! 저희 자체자작 삭스 앵클부츠', 'B1.jpg', 'B1_1.jpg', 'B1_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 5,'뒷태여신 삭스 앵클부츠 5cm', 39900, '미끄러움 걱정없는 논슬립 바닥창을 사용해 안정감있는 착화감을 선사해준답니다', 'B2.jpg', 'B2_1.jpg', 'B2_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 5,'스타일링 워커 5cm', 55900, '러블리 메이드 워커', 'B3.jpg', 'B3_1.jpg', 'B3_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 5,'브리스 삭스 앵클힐 4cm', 39900, '지금부터 봄까지 쭈-욱 즐기기 좋은 텐션좋은 삭스 앵클', 'B4.jpg', 'B4_1.jpg', 'B4_2.jpg');
+insert into tis_webproduct values(webproduct_seq.nextval, 5,'벨지아 앵클부츠 6cm', 32900, '퍼안감과 기모바닥창으로 따뜻하게 신어지며 안쪽 인사이드지퍼 디테일로 손쉽게 착화가 가능해요', 'B5.jpg', 'B5_1.jpg', 'B5_2.jpg');
+
+drop table product_reply;
+
+create table product_reply (
+ reply_code number(4) primary key,
+ reply_comment varchar2(100) not null,
+ reply_date date not null,
+ reply_member_id varchar2(15) not null,
+ reply_product_id number(4) not null
+ );
+
+ drop sequence product_reply_seq;
+ 
+ create sequence product_reply_seq;
+ 
+ alter table product_reply add constraint product_reply_fk1 foreign key(reply_member_id) references tis_member(id) on delete cascade;
+ alter table product_reply add constraint product_reply_fk2 foreign key(reply_product_id) references tis_webproduct(product_id) on delete cascade;
+ 
+ --cart테이블
+drop table tis_cart;
+create table tis_cart(
+    id varchar2(15),
+    product_id number(4) not null,
+    product_code number(3) not null,
+    product_name varchar2(100) not null,
+    product_price number(8),
+    goods_cnt number(8) default 1,
+    product_size number(4),
+    product_img1 varchar2(100) not null,
+    order_check number(1)
+);
+
+desc tis_cart;
+select * from tis_cart; 
+
+--order테이블
+drop table tis_order;
+create table tis_order(
+    id varchar2(15),
+    product_id number(4) not null,
+    product_code number(3) not null,
+    product_name varchar2(100) not null,
+    product_price number(8),
+    goods_cnt number(8) default 1,
+    product_size number(4),
+    product_img1 varchar2(100) not null
+);
+
+desc tis_order;
+select * from tis_order;
+ 
+ 

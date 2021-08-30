@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+ * custom css 입니다. 추가적인 css 는 여기에 작성을 해주세요.
+ */
+
+
+/* GNB */
+#header{height:200px;}
+#header .btn_all_menu_open{background:none; top:20px;}
+#header .gnb{height:48px; text-align:center; z-index:102;}
+#header .gnb_right{display:inline-block; position:inherit; right:inherit; top:inherit;}
+#header .gnb_right a{overflow:hidden; text-indent:9999em;}
+#header .gnb .depth0 > li > a{font-weight:normal;}
+#header .header_gnb{position:relative; height:48px; z-index:150;}
+#header .header_gnb.headerFix{position:fixed; top:0; left:0; z-index:102; width:100%; min-width:1200px; background-color:#ffffff; box-shadow:0px 0 5px rgba(0, 0, 0, 0.35);}
+#header .gnb_left{position:relative; top:16px; height:16px; border-right:1px solid #dddddd; margin:0 30px 0 0;}
+#header .gnb_left a{position:relative; top:-16px; width:48px; height:48px;}
+#header .gnb_right{position:relative; top:16px; height:16px; border-left:1px solid #dddddd; margin:0 0 0 30px;}
+#header .gnb_right a{position:relative; top:-16px; width:48px; height:48px;}
+#header .gnb_menu_box{width:770px; text-align:left;}
+#header .gnb .depth0 > li{position:static;}
+#header .gnb .depth0 > li > a > img{max-height:48px; vertical-align:top;}
+#header .gnb .depth1{left:50%; top:48px; width:1200px; margin-left:-600px; border:0; border-top:1px solid #d9d9d9; padding:40px 0 40px 0;}
+#header .gnb .depth1 > li{width:25%; min-height:163px; float:left; border-left:1px solid #eeeeee; ; border-right:1px solid #eeeeee; box-sizing:border-box; padding:0 30px 0 30px; margin-left:-1px;}
+#header .gnb .depth1 > li > a{font-size:16px; color:#666666; font-weight:bold; padding:5px 0 5px 7px; background:url('../img/icon/etc/icon_dot_gnb.png') no-repeat left 16px;}
+#header .gnb .depth1 > li > a:hover, #header .gnb .depth1 > li > a.active{background:url('../img/icon/etc/icon_dot_gnb.png') no-repeat left 16px; color:inherit;}
+#header .gnb .depth1 li a img{max-width:100%;}
+#header .gnb .depth2{display:block!important; position:static; width:100%; background:none; border:none;}
+#header .gnb .depth2 > li > a{font-size:16px; color:#666666; padding:3px 0 3px 19px; background:url('../img/icon/etc/icon_bar_gnb.png') no-repeat 10px 16px;}
+#header .gnb .depth2 > li > a:hover, #header .gnb .depth2 > li > a.active{background:url('../img/icon/etc/icon_bar_gnb.png') no-repeat 10px 16px; color:inherit;}
+#header .gnb .depth3{display:block!important; position:static; width:100%; background:none; border:none; padding:3px 0 0 0;}
+#header .gnb .depth3 li{padding-left:10px;}
+#header .gnb .depth3 > li > a{font-size:12px; color:#aaaaaa; padding:3px 0 3px 19px;}
+#header .gnb .depth3 > li > a:hover, #header .gnb .depth3 > li > a.active{background:none; color:inherit;}
+.header_gnb.headerFix .gnb_bg{top:48px;}
+.gnb_bg{display:none; position:absolute; top:48px; left:0; width:100%; background-color:#ffffff; z-index:101; border-top:1px solid #d9d9d9; box-shadow:0px 5px 9px rgba(0, 0, 0, 0.2);}
+.gnb_bg.on{display:block;}
+
+/*gnb 기능버튼*/
+#header .header_top{position: relative;height:60px; border:0;z-index: 152;}
+.top_member_box{margin:76px 0 0 0;}
+.top_member_box > li:first-child > a{padding-left:0;}
+.top_member_box > li a{font-size:12px; color:#777777; font-weight:bold;}
+.top_member_box .txt_bar{background-color:#7d7d7d;}
+#header .h1_logo{text-align:inherit; padding:10px 0 0 0;}
+.top_mypage_cont .top_mypage_tit.active{border:0; margin:0;}
+.top_mypage_cont .top_mypage_tit.active a{padding:4px 0 4px 10px}
+.top_mypage_cont li a:hover{background-color:#272727;}
+
+/* 검색 */
+#header .header_search{position: relative;z-index: 151;}
+#header .top_search{right:inherit; top:9px; left:130px; width:320px; border:0; background:url('../img/common/bg/bg_bar.png') no-repeat left top;}
+#header .top_search .top_text_cont{background:none;}
+#header .top_search .top_text_cont .top_srarch_text{width:320px;height: 36px;background:transparent; padding:5px 70px 5px 40px;}
+#header .top_search .top_text_cont .btn_top_srarch{top:7px; right:39px; border:0;}
+#header .top_search .top_search_cont .recent_box{width:169px; border:0;}
+#header .top_search .search_cont{position:relative; top:10px; width:320px; border:1px solid #e4e6e8;}
+#header .top_search .search_cont .recent_box li a{width:55%;}
+#header .top_search .recom_box{width:121px; padding:0 15px 20px 15px;}
+
+/*전체 카테고리 다시 정의*/
+#header .btn_all_menu_close{display:inline-block; top:-110px; left:1120px; right:35px; width:28px; height:28px; background:url('../img/common/btn/btn_allmenu_close.png') no-repeat left top;}
+#header .gnb_allmenu{position:fixed; left:50%; top:50%; margin:-300px 0 0 -600px; width:1200px; height:600px; text-align:left; z-index:151; background:none; border:0;}
+#header .gnb_allmenu_box{height:600px; padding:0;}
+#header .gnb_allmenu_box .all_menu_cont{padding:0 35px 0 35px;}
+#header .gnb_allmenu_box .all_menu_cont > a{font-size:22px; color:#ffffff; border-bottom:2px solid #ffffff; padding:8px 0 1px 0; margin:0 0 20px 0;}
+#header .gnb_allmenu_box > ul > li{width:25%!important;}
+#header .gnb_allmenu_box .all_depth1{border:0;}
+#header .gnb_allmenu_box .all_depth1 li a{font-size:16px; color:#ffffff; border:0; background:url('../img/icon/etc/icon_dot.png') no-repeat left 16px; padding-left:7px;}
+#header .gnb_allmenu_box .all_menu_cont a img{max-width:100%;}
+#header .gnb_allmenu_box .all_menu_cont .all_depth1 a img{max-width:218px;}
+#header .gnb_allmenu_box .all_menu_cont .all_depth2 a img{max-width:205px;}
+#header .gnb_allmenu_box .all_menu_cont .all_depth3 a img{max-width:195px;}
+#header .gnb_allmenu_box .all_depth2 li{padding:0 0 0 10px;}
+#header .gnb_allmenu_box .all_depth2 li a{font-size:14px; background:url('../img/icon/etc/icon_bar.png') no-repeat left 16px; padding-left:7px;}
+#header .gnb_allmenu_box .all_depth3{padding:0 0 5px 0;}
+#header .gnb_allmenu_box .all_depth3 li{padding:0 0 0 20px}
+#header .gnb_allmenu_box .all_depth3 li a{font-size:12px; color:#aaaaaa; background:none;}
+
+.gnb_allmenu_dim{display:none; position:fixed; left:0; top:0; width:100%; height:100%; background-color:#333333; z-index:150;}
+.gnb_logo{position:absolute; left:36px; top:-108px; display:inline-block; width:102px; height:30px; background:url('../img/common/bg/gnb_logo.png') no-repeat left top;}
+
+/* 하단 공지사항 */
+.notice_wrap{height:79px; border-bottom:1px solid #dddddd;}
+.notice_wrap .notice{position:relative; width:1200px; margin:0 auto;}
+.notice_wrap .notice h3{position:absolute; left:0; top:30px;}
+.notice_wrap .notice #js_notice_list{left:166px; top:24px; width:500px;}
+.notice_wrap .notice .notice_rolling ul{width: 430px;}
+.notice_wrap .notice .notice_rolling ul li a{font-size:14px; color:#666666;}
+.notice_rolling .btn_notice_rolling a{float:left;}
+.notice_wrap .sns_wrap{position:absolute; right:0; top:29px;}
+.notice_wrap .sns_wrap a{margin-left:20px;}
+
+/* 하단 풋터 */
+#footer{background-color:#66554d; padding:0 0 22px 0;}
+.foot_cont{font-size:14px;}
+.foot_cont .foot_list{border:0; margin-top:10px;}
+.foot_cont .foot_list ul{width:auto; margin:0;}
+.foot_cont .foot_list ul li a{display:inline-block; font-size:14px; color:#ffffff; font-weight:bold; border-left:1px solid #7f716b; height:13px; line-height:0.9em;}
+.foot_cont .foot_list ul li:first-child a{border:0;}
+.foot_cont address strong{color:#e3d9d9;}
+.foot_cont .foot_info_list dt{color:#e3dada; font-weight:bold;}
+.foot_cont .foot_info_list dd{color:#bbb2b2; font-weight:normal;}
+.foot_cont .foot_info_list dd a{color:#bbb2b2; font-weight:normal;}
+.foot_cont .foot_info_list dd a.btn_licensee_info{font-size:14px; color:#e3dada; font-weight:bold; border:0;}
+.foot_cont .copyright{padding-top:20px;}
+
+/* 좌우스크롤 배너 */
+#scroll_left{left:-184px; width:124px;}
+#scroll_left.ban_fixed{top:124px; margin-left:-784px;}
+#scroll_right{width:114px; right:-174px;}
+#scroll_right.ban_fixed{top:124px; margin-right:-774px;}
+#scroll_right .btn_scroll_top{padding:0;}
+#scroll_right .right_banner img{margin:0;}
+.scroll_right_cont{padding:0;}
+.scroll_right_cont h4{display:none;}
+.scroll_right_cont ul{padding:0;}
+.scroll_right_cont ul li{width:112px; height:112px; margin:0; border:1px solid #593838; margin-top:-1px;}
+.scroll_right_cont .photo{width:112px; height:112px;}
+.scroll_right_cont .scr_paging{width:114px; height:28px; background-color:#593838; padding-top:7px;}
+.scroll_right_cont .scr_paging strong{color:#ffffff;}
+.scroll_right_cont .scr_paging span{color:#ffffff;}
+.scroll_right_cont .src_box{display:block; height:107px; border:1px solid #593838;}
+.scroll_right_cont .src_box em{width: 72px; height: 81px;}
